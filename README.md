@@ -1,7 +1,8 @@
-# TrueMoney Voucher API
+TrueMoney Voucher API
 
 # Endpoint Base URL :
 https://rikumi.qzz.io/api/truemoney
+
 
 # ข้อมูลเพิ่มเติม
  API นี้รองรับทั้ง GET และ POST requests
@@ -10,6 +11,7 @@ https://rikumi.qzz.io/api/truemoney
 
 API นี้รองรับการร้องขอผ่านทั้ง HTTP GET และ POST methods พร้อมรูปแบบข้อมูลทั้ง JSON และ form-data
 
+
 # Authentication
 API นี้ไม่ต้องการการ authentication ในขณะนี้ คุณสามารถเริ่มใช้งานได้ทันทีโดยเรียกใช้ endpoint พร้อมพารามิเตอร์ที่จำเป็น
 
@@ -17,6 +19,7 @@ Endpoint
 https://rikumi.qzz.io/api/truemoney
 POST
 หรือใช้ผ่าน GET request โดยส่งพารามิเตอร์ผ่าน query string
+
 
 # Parameter:
 voucher	String	Yes	Voucher hash (เฉพาะส่วนหลัง v= ใน URL) เช่น จากลิงก์เต็ม https://gift.truemoney.com/campaign/?v=019b54d1844e7c99a68f3d394b249e3845X ส่งเฉพาะ 019b54d1844e7c99a68f3d394b249e3845X หรือลิงค์แบบเต็มได้หมด 
@@ -79,11 +82,12 @@ Success Response
   }
 }
 
-# Error Response
+Error Response
 {
   "status": "fail",
   "message": "Voucher hash is required"
 }
+
 
 # Error Codes: 
 Voucher hash is required	ไม่ได้ส่งพารามิเตอร์ voucher	ตรวจสอบให้แน่ใจว่าได้ส่งพารามิเตอร์ voucher
@@ -95,6 +99,7 @@ Invalid voucher hash	voucher hash ไม่ถูกต้อง	ตรวจส
 Invalid phone number	หมายเลขโทรศัพท์ไม่ถูกต้อง	ตรวจสอบว่าเป็นหมายเลขโทรศัพท์ 10 หลักและขึ้นต้นด้วย 0
 
 { "status": { "message": "Voucher ticket is out of stock.", "code": "VOUCHER_OUT_OF_STOCK" },	ซองนี้ถูกใช้ไปแล้ว	ใช้ซองอื่นที่ยังไม่ถูกใช้
+
 
 
 # ตัวอย่างการใช้งาน:
